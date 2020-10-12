@@ -1,6 +1,7 @@
 package ru.netology.stats;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class StatsServiceTest {
@@ -8,7 +9,6 @@ class StatsServiceTest {
     StatsService service = new StatsService();
 
     @Test
-
     void shouldCalculateSum() {
         int expected = 180;
         int actual = service.calculateSum(sales);
@@ -16,38 +16,37 @@ class StatsServiceTest {
     }
 
     @Test
-   void shouldReturnAverageSale() {
+    void shouldReturnAverageSale() {
         int expected = 15;
-       int actual = service.AverageSale(sales);
+        int actual = service.averageSale(sales);
         assertEquals(expected, actual);
     }
-
 
     @Test
     void shouldReturnMaxSumPerMonth() {
         int expected = 8;
-        int actual = service.MaxSumPerMonth(sales);
+        int actual = service.maxSumPerMonth(sales);
         assertEquals(expected, actual);
     }
 
     @Test
     void shouldReturnMinSumPerMonth() {
         int expected = 9;
-        int actual = service.MinSumPerMonth(sales);
+        int actual = service.minSumPerMonth(sales);
         assertEquals(expected, actual);
     }
 
     @Test
     void shouldReturnMonthWithMoreThenAverage() {
         int expected = 5;
-        int actual = service.MonthWithMoreThenAverage(sales);
+        int actual = service.monthWithMoreThenAverage(sales);
         assertEquals(expected, actual);
     }
 
     @Test
     void shouldReturnMonthWithLessThenAverage() {
         int expected = 5;
-        int actual = service.MonthWithLessThenAverage(sales);
+        int actual = service.monthWithLessThenAverage(sales);
         assertEquals(expected, actual);
     }
 }
